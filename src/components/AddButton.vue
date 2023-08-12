@@ -27,4 +27,5 @@ import { Edit } from "@element-plus/icons-vue";
         border-color: darken($color: $accent, $amount: 10%);
     }
 }
+
 </style>
