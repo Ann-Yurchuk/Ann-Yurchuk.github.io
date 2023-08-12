@@ -1,5 +1,6 @@
 <script setup>
 import { Edit } from "@element-plus/icons-vue";
+
 </script>
 
 <template>
@@ -10,10 +11,11 @@ import { Edit } from "@element-plus/icons-vue";
   
 <style lang="scss" scoped>
 @import '../assets/styles/common.scss';
+
 .btn {
     position: absolute;
-    top: 40px;
-    right: 200px;
+    top: 50;
+    right: 25%;
     font-size: 16px;
     font-family: "Ubuntu", sans-serif;
     background-color: $accent;
@@ -27,5 +29,4 @@ import { Edit } from "@element-plus/icons-vue";
         border-color: darken($color: $accent, $amount: 10%);
     }
 }
-
 </style>

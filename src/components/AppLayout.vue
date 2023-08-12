@@ -1,18 +1,34 @@
 <script setup>
+import { ref } from "vue"
+import { uid } from "uid";
 import ContainerBox from './ContainerBox.vue'
 import TaskInput from './TaskInput.vue'
-import AddButton from './AddButton.vue'
+import TaskCard from './TaskCard.vue'
+
+const todoList = ref([])
+
+const createTodo = (todo) => {
+    todoList.value.push({
+        id: uid(),
+        todo,
+        isCompleted: null,
+        isEditing: null,
+    })
+}
+
 </script>
 
 <template>
     <div id="app">
         <ContainerBox>
             <div class="main">
-                <TaskInput />
-                <AddButton />
+                <h1>Create TODO</h1>
+                <TaskInput @create-todo="createTodo" />
                 <div class="tasks">
-                    <div class="title">Select a task</div>
-
+                    <h2 class="title">Select a task</h2>
+                    <ul class="tasks-list">
+                        <TaskCard v-for="todo in todoList" :todo="todo"/>
+                    </ul>
                 </div>
             </div>
         </ContainerBox>
@@ -31,14 +47,13 @@ import AddButton from './AddButton.vue'
     margin-bottom: 60px;
 }
 
-.main {
-    position: relative;
+.tasks-list{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-    padding: 40px;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
 </style>

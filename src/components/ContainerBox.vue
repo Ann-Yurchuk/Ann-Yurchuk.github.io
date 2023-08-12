@@ -11,7 +11,7 @@
 @import '../assets/styles/common.scss';
 
 .container {
-    max-width: 1110px;
+    max-width: 1100px;
     min-height: 100vh;
     margin: 0 auto;
     background-color: $background;
