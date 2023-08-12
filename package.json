@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": " https://ann-yurchuk.github.io/todo-list/",
+  "homepage": "https://ann-yurchuk.github.io/todo-list/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
