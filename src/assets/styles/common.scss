@@ -116,7 +116,8 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  min-width: 260px;
 }
 
 .todo {
@@ -124,7 +125,23 @@ table {
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  width: 260;
+  width: 100%;
+  padding: 20px;
+  background-color: $backgroundMuted;
+  border-radius: 10px;
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 40%;
+    border: 0.5px solid $text;
+    background-color: $background;
+
+    &:checked {
+      background-color: $completedColor;
+    }
+  }
 }
 
 .icon {

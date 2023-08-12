@@ -1,6 +1,5 @@
 <script setup>
 import { Edit } from "@element-plus/icons-vue";
-
 </script>
 
 <template>
@@ -20,7 +19,7 @@ import { Edit } from "@element-plus/icons-vue";
     font-family: "Ubuntu", sans-serif;
     background-color: $accent;
     border-color: $accent;
-    color: $textMuted;
+    color: $backgroundMuted;
 
     &:hover,
     &:focus,

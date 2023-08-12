@@ -14,6 +14,22 @@ const createTodo = (todo) => {
         isCompleted: null,
         isEditing: null,
     })
+};
+
+const toggleTaskComplete = (todoPosition) => {
+    todoList.value[todoPosition].isCompleted = !todoList.value[todoPosition].isCompleted
+};
+
+const toggleEditTask = (todoPosition) => {
+    todoList.value[todoPosition].isEditing = !todoList.value[todoPosition].isEditing
+};
+
+const updateTask = (todoValue, todoPosition) => {
+    todoList.value[todoPosition].todo = todoValue
+};
+
+const deleteTask = (todoId) => {
+todoList.value = todoList.value.filter((todo)=> todo.id !== todoId)
 }
 
 </script>
@@ -22,14 +38,21 @@ const createTodo = (todo) => {
     <div id="app">
         <ContainerBox>
             <div class="main">
-                <h1>Create TODO</h1>
+                <h1>Create a task</h1>
                 <TaskInput @create-todo="createTodo" />
-                <div class="tasks">
+                <div class="tasks" v-if="todoList.length > 0">
                     <h2 class="title">Select a task</h2>
                     <ul class="tasks-list">
-                        <TaskCard v-for="todo in todoList" :todo="todo"/>
+                        <TaskCard v-for="(todo, index) in todoList" 
+                        :todo="todo" 
+                        :index="index"
+                        @toggle-complete="toggleTaskComplete"
+                        @edit-todo="toggleEditTask" 
+                        @update-todo="updateTask"
+                        @delete-todo="deleteTask" />
                     </ul>
                 </div>
+                <p v-else>There are no tasks to perform!..</p>
             </div>
         </ContainerBox>
     </div>
@@ -47,7 +70,7 @@ const createTodo = (todo) => {
     margin-bottom: 60px;
 }
 
-.tasks-list{
+.tasks-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,5 +78,4 @@ const createTodo = (todo) => {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 </style>

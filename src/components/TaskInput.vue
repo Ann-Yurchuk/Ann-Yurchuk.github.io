@@ -22,7 +22,7 @@ const createTodo = () => {
   }
 
   todoState.invalid = true;
-  todoState.errMessage = toast.error("Please enter text! Task value cannot be empty!", {
+  todoState.errMessage = toast.error("Please enter the task text, it must not be empty!", {
     autoClose: 3000,
   });
 
@@ -32,7 +32,9 @@ const createTodo = () => {
 
 <template>
   <div class="wrapper" >
-    <el-input v-model="todoState.todo" class="input" placeholder="Please enter your task ..." />
+    <el-input v-model="todoState.todo" 
+    class="input" 
+    placeholder="Please enter your task ..." />
     <AddButton @click="createTodo()" />
   </div>
 </template>
