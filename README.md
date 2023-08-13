@@ -1,29 +1,25 @@
-# TODO List
+# TO-DO List
 
-This template should help get you started developing with Vue 3 in Vite.
+Мета: Створити простий веб-застосунок TO-DO List, який дозволить користувачеві додавати, редагувати і видаляти задачі.
 
-## Recommended IDE Setup
+Технічне завдання та вимоги: 
+1. Використати Vue.js для створення компонентів та керування станом програми.
+2. Інтерфейс повинен містити такі елементи:
+  - Поле введення для додавання нового завдання.
+  - Кнопка "Додати", щоб додати нове завдання до списку.
+  - Список доданих завдань з можливістю відзначити виконані чи видалити завдання.
+  - Опціонально: додати кнопку "Редагувати", щоб користувачі могли змінити текст завдання після додавання.
+3. Завдання повинні зберігатися у стані програми та не повинні зникати після перезавантаження сторінки.
+4. Верстка та дизайн можуть бути простими, але мають бути читабельними та естетичними.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Використаний стек технологій:
+- vue,
+- vue3-toastify,
+- vite,
+- element-plus,
+- sass,
+- uid
 
-## Customize configuration
+Завдання виконано згідно вимог. Для зберігання стану використано LocalStorage, стилізація за допомогою Sass, id списків генерується з uid, іконки і деякі компоненти з бібліотеки element-plus. Для виведення помилок - vue3-toastify.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Посилання на сайт: https://ann-yurchuk.github.io/todo-list/
