@@ -23,3 +23,8 @@
 Завдання виконано згідно вимог. Для зберігання стану використано LocalStorage, стилізація за допомогою Sass, id списків генерується з uid, іконки і деякі компоненти з бібліотеки element-plus. Для виведення помилок - vue3-toastify.
 
 Посилання на сайт: https://ann-yurchuk.github.io/todo-list/
+![empty list](https://github.com/Ann-Yurchuk/todo-list/assets/105579383/819a3764-0998-4758-a1f3-655f2e3d9563)
+![attached list](https://github.com/Ann-Yurchuk/todo-list/assets/105579383/b3634617-9ccf-42b9-9b39-07f0d901fbfc)
+![error with empty field](https://github.com/Ann-Yurchuk/todo-list/assets/105579383/dd8d78ce-92ce-44d3-93ed-d1aab2206fde)
+
+
